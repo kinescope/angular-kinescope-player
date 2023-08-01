@@ -1,5 +1,5 @@
 {
-  "name": "angular-kinescope-player",
+  "name": "@kinescope/angular-kinescope-player",
   "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^14.1.0",
