@@ -1,6 +1,6 @@
 {
   "name": "@kinescope/angular-kinescope-player",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "install:all": "npm ci && npm run install:angular-kinescope-player",
