@@ -31,7 +31,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@kinescope'
       - run: npm run install:all
-      - run: ng build
+      - run: npx ng build
       - run: cd dist/angular-kinescope-player
       - run: git config --global user.name "GitHub CD bot"
       - run: git config --global user.email "github-cd-bot@kinescope.io"
