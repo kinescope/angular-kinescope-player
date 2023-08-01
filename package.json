@@ -1,5 +1,5 @@
 {
-  "name": "angular-kinescope-player",
+  "name": "@kinescope/angular-kinescope-player",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
