@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "install:all": "npm ci && npm run install:angular-kinescope-player",
+    "install:angular-kinescope-player": "cd ./projects/angular-kinescope-player && npm ci && cd ../../",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
