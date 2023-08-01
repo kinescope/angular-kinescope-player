@@ -33,13 +33,9 @@ jobs:
       - run: npm run install:all
       - run: git config --global user.name "GitHub CD bot"
       - run: git config --global user.email "github-cd-bot@kinescope.io"
-      - run: cd projects/angular-kinescope-player
-      # upgrade npm version in package.json to the tag used in the release.
-      - run: npm version ${{ github.event.release.tag_name }} --allow-same-version
-      - run: cd ../..
+      - run: cd projects/angular-kinescope-player && npm version ${{ github.event.release.tag_name }} --allow-same-version
       - run: npx ng build
-      - run: cd dist/angular-kinescope-player
-      - run: npm publish --access public
+      - run: cd dist/angular-kinescope-player && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       # push the version changes to GitHub
