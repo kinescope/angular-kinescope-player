@@ -2,8 +2,8 @@
   "name": "@kinescope/angular-kinescope-player",
   "version": "0.0.4",
   "peerDependencies": {
-    "@angular/common": "^14.1.0",
-    "@angular/core": "^14.1.0",
+    "@angular/common": "^17.0.7",
+    "@angular/core": "^17.0.7",
     "lodash": "^4.17.21",
     "@types/lodash": "^4.14.196"
   },

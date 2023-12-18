@@ -102,7 +102,6 @@ export class KinescopePlayerComponent implements OnDestroy {
     }
     this.playerLoad = true;
     this._config.onJSLoad?.();
-    debugger;
     await this.create();
   };
 
@@ -258,7 +257,6 @@ export class KinescopePlayerComponent implements OnDestroy {
     }
 
     this.player = await this.createPlayer(playerId);
-    debugger;
     this.getEventList().forEach(event => this.player?.on(event[0], event[1]));
   };
 
