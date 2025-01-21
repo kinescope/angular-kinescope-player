@@ -224,14 +224,30 @@ export class KinescopePlayerComponent implements OnDestroy {
     const { title, subtitle, poster, chapters, vtt, bookmarks, actions, drmAuthToken } = this._config;
     const options: PlaylistItemOptions = {};
 
-    options.title = title ?? undefined;
-    options.subtitle = subtitle ?? undefined;
-    options.poster = poster ?? undefined;
-    options.chapters = chapters ?? undefined;
-    options.vtt = vtt ?? undefined;
-    options.bookmarks = bookmarks ?? undefined;
-    options.actions = actions ?? undefined;
-    options.drm = drmAuthToken ? { auth: { token: drmAuthToken } } : undefined;
+    if (title !== undefined) {
+      options.title = title;
+    }
+    if (subtitle !== undefined) {
+      options.subtitle = subtitle;
+    }
+    if (poster !== undefined) {
+      options.poster = poster;
+    }
+    if (chapters !== undefined) {
+      options.chapters = chapters;
+    }
+    if (vtt !== undefined) {
+      options.vtt = vtt;
+    }
+    if (bookmarks !== undefined) {
+      options.bookmarks = bookmarks;
+    }
+    if (actions !== undefined) {
+      options.actions = actions;
+    }
+    if (drmAuthToken !== undefined) {
+      options.drm = { auth: { token: drmAuthToken } };
+    }
 
     await this.setPlaylistItemOptions(options);
   };
